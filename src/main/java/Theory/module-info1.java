@@ -1,4 +1,4 @@
-module com.example.bookstore_management {
+/*module Theory {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -7,7 +7,6 @@ module com.example.bookstore_management {
     requires com.dlsc.formsfx;
     requires eu.hansolo.tilesfx;
 
-    opens com.example.bookstore_management to javafx.fxml;
-    exports com.example.bookstore_management;
     exports Theory to javafx.graphics;
 }
+ */
