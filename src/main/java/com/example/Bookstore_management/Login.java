@@ -44,8 +44,6 @@ public class Login extends Application {
         //add Scene to Stage
         stage.setScene(sc);
         stage.setTitle("Bookstore Management ");     // set title for stage
-        stage.setWidth(1200);
-        stage.setHeight(500);
         stage.show();
     }
 }

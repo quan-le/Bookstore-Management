@@ -1,0 +1,11 @@
+diff a/src/main/java/com/example/bookstore_management/HelloController.java b/src/main/java/com/example/bookstore_management/HelloController.java	(rejected hunks)
+@@ -11,4 +11,6 @@
+     protected void onHelloButtonClick() {
+         welcomeText.setText("Welcome to JavaFX Application!");
+     }
+-}
+\ No newline at end of file
++}
++
++//test test test//
+\ No newline at end of file

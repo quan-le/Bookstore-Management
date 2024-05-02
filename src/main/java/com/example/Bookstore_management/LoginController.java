@@ -1,43 +1,26 @@
 package com.example.Bookstore_management;
 
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 
-public class LoginController {
-
-    @FXML
-    private FontAwesomeIconView bookIcon;
+class LoginController {
 
     @FXML
-    private Button btLogin;
+    private Button close;
 
     @FXML
-    private AnchorPane leftScene;
+    private Button loginBut;
 
     @FXML
-    private Label loginLabel;
-
-    @FXML
-    private AnchorPane mainScene;
+    private StackPane main_pane;
 
     @FXML
     private PasswordField password;
 
     @FXML
-    private AnchorPane rightScene;
-
-    @FXML
-    private FontAwesomeIconView userIcon;
-
-    @FXML
     private TextField username;
-
-    @FXML
-    private Label welcomeLabel;
 
 }
