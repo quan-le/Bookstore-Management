@@ -1,4 +1,4 @@
-package com.example.bookstore_management;
+package com.example.Bookstore_management;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -12,5 +12,3 @@ public class HelloController {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
 }
-
-//test test test//

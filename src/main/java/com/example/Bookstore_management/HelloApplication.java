@@ -1,4 +1,4 @@
-package com.example.bookstore_management;
+package com.example.Bookstore_management;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -6,8 +6,12 @@ module com.example.bookstore_management {
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
     requires eu.hansolo.tilesfx;
+    requires de.jensd.fx.glyphs.fontawesome;
 
-    opens com.example.bookstore_management to javafx.fxml;
-    exports com.example.bookstore_management;
-    exports Theory to javafx.graphics;
+    opens com.example.Bookstore_management to javafx.fxml;
+    exports com.example.Bookstore_management;
+    //exports Theory to javafx.graphics;
+    opens Theory to javafx.fxml, javafx.graphics;
+    exports Theory;
+
 }

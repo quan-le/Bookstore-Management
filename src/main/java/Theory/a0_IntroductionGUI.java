@@ -49,10 +49,13 @@ public class a0_IntroductionGUI extends Application
 
         //add layout to Scene, scene take input layout
         sc = new Scene(root);
+        //sc = new Scene(root,400,400)
 
         //add Scene to Stage
         stage.setScene(sc);
         stage.setTitle("Click me Program");     // set title for stage
+        stage.setWidth(1200);
+        stage.setHeight(500);
         stage.show();                           // Important: display the stage
 
     }
