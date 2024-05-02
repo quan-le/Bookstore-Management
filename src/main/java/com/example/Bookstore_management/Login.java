@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import javafx.scene.control.Alert;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -43,7 +44,7 @@ public class Login extends Application {
 
         //add Scene to Stage
         stage.setScene(sc);
-        stage.setTitle("Bookstore Management ");     // set title for stage
+        stage.setTitle("Bookstore Management");     // set title for stage
         stage.show();
     }
 }
