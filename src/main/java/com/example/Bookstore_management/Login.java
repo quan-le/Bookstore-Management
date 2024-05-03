@@ -22,7 +22,6 @@ public class Login extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         //-----------------Load fxml file into Root--------------------
-        //HBox root = new HBox();
         System.out.println(getClass().getResource("Login.fxml"));
 
         //Load using filestream
