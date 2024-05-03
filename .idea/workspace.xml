@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a1ea9d6-07ff-483b-bdb2-8401b5c4e540" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Dashboard.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/DashboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bookstore-Management/com/example/Bookstore_management/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bookstore-Management/com/example/Bookstore_management/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bookstore-Management/com/example/Bookstore_management/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bookstore-Management/com/example/Bookstore_management/Dashboard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Bookstore-Management/com/example/Bookstore_management/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bookstore-Management/com/example/Bookstore_management/Login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Bookstore-Management/com/example/Bookstore_management/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bookstore-Management/com/example/Bookstore_management/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Dashboard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/LoginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +24,8 @@
       <list>
         <option value="package-info" />
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -86,7 +86,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mrngu/OneDrive/Documents/GitHub/Bookstore-Management&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mrngu/OneDrive/Documents/GitHub/Bookstore-Management/src/main/resources/com/example/Bookstore_management&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15057573&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.39624608&quot;,
@@ -97,12 +97,13 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mrngu\OneDrive\Documents\GitHub\Bookstore-Management\src\main\resources\com\example\Bookstore_management" />
       <recent name="C:\Users\windows\OneDrive - VietNam National University - HCM INTERNATIONAL UNIVERSITY\Desktop\Programming\Java\Project\Bookstore\src\main\java\com\example\Bookstore_management" />
       <recent name="C:\Users\windows\OneDrive - VietNam National University - HCM INTERNATIONAL UNIVERSITY\Desktop\Programming\Java\Project\Bookstore\src\main\java\Bookstore_management" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\mrngu\OneDrive\Documents\GitHub\Bookstore-Management\src\main\java\com\example\Bookstore_management" />
       <recent name="C:\Users\mrngu\OneDrive\Documents\GitHub\Bookstore-Management\src\main\resources\com\example\Bookstore_management" />
+      <recent name="C:\Users\mrngu\OneDrive\Documents\GitHub\Bookstore-Management\src\main\java\com\example\Bookstore_management" />
       <recent name="C:\Users\windows\OneDrive - VietNam National University - HCM INTERNATIONAL UNIVERSITY\Desktop\Programming\Java\Project\Bookstore\src\main\resources\com\example\Bookstore_management" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -217,5 +218,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.RuntimeException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
