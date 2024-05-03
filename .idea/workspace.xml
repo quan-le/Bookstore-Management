@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a1ea9d6-07ff-483b-bdb2-8401b5c4e540" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/DashboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bookstore-Management/com/example/Bookstore_management/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bookstore-Management/com/example/Bookstore_management/Dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bookstore-Management/com/example/Bookstore_management/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bookstore-Management/com/example/Bookstore_management/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bookstore-Management/com/example/Bookstore_management/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bookstore-Management/com/example/Bookstore_management/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/LoginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +108,7 @@
       <recent name="Theory" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.example.Bookstore_management.Login">
+  <component name="RunManager">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Bookstore_management.HelloApplication" />
       <module name="Bookstore-Management" />
