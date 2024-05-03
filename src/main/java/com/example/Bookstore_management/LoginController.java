@@ -42,7 +42,6 @@ public class LoginController {
             showAlert("Login successfully");
             //open the dashboard file xd
             try {
-                System.out.println("Login controller load fxml: "+ getClass().getResource("Dashboard.fxml"));
                 Parent root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
                 Stage stage = (Stage) loginBut.getScene().getWindow();
                 stage.setScene(new Scene(root));
