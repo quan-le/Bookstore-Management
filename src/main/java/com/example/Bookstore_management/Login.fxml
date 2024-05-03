@@ -9,14 +9,12 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="742.0" prefWidth="1011.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Bookstore_management.LoginController">
-
-   <children>
+<StackPane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="742.0" prefWidth="1011.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Bookstore_management.LoginController">   <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
             <AnchorPane prefHeight="742.0" prefWidth="507.0" style="-fx-background-color: #40E0D0;">
                <children>
-                  <FontAwesomeIconView glyphName="BOOK" layoutX="142.0" layoutY="395.0" size="240" />
+                  <FontAwesomeIconView glyphName="BOOK" layoutX="134.0" layoutY="396.0" size="240" />
                   <Label layoutX="51.0" layoutY="430.0" text="Welcome to the Bookstore">
                      <font>
                         <Font size="33.0" />
