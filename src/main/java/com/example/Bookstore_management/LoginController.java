@@ -42,7 +42,7 @@ public class LoginController {
             showAlert("Login successfully");
             //open the dashboard file xd
             try {
-                Parent root = FXMLLoader.load(getClass().getResource("src/main/java/com/example/Bookstore_management/Dashboard.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
                 Stage stage = (Stage) loginBut.getScene().getWindow();
                 stage.setScene(new Scene(root));
                 stage.setTitle("Dashboard");

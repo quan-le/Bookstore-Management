@@ -90,7 +90,6 @@ public class DashboardController {
     @FXML
     private Button dashboard_btn;
 
-
     @FXML
     private AnchorPane dashboard_customers;
 
@@ -160,6 +159,7 @@ public class DashboardController {
     @FXML
     private Label username;
 
+    @FXML
     public void switchPanel(ActionEvent event) {
         if (event.getSource() == dashboard_btn) {
             dashboard_anchorPane.setVisible(true);
