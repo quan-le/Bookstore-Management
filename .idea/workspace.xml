@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a1ea9d6-07ff-483b-bdb2-8401b5c4e540" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/Bookstore_management/Dashboard.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/Bookstore_management/Login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/Bookstore_management/SortingAlgo.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +18,8 @@
       <list>
         <option value="package-info" />
         <option value="JavaFXApplication" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -81,7 +80,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/windows/OneDrive - VietNam National University - HCM INTERNATIONAL UNIVERSITY/Desktop/Programming/Java/Project/Bookstore/src/main/resources/com/example/Bookstore_management",
+    "last_opened_file_path": "C:/Users/windows/AppData/Local/SceneBuilder/SceneBuilder.exe",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15057573",
     "project.structure.side.proportion": "0.39624608",
