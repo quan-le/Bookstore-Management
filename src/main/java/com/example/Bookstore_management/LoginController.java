@@ -38,7 +38,7 @@ public class LoginController {
         if (enteredUsername.isEmpty() || enteredPassword.isEmpty()) {
             showAlert("Please enter your username and password");
         }
-        else if (enteredUsername.equals("quanlebeo") && enteredPassword.equals("quangcuto")) {
+        else if (enteredUsername.equals("admin") && enteredPassword.equals("admin")) {
             //Correct user name and password
 
             getData.username = username.getText();
@@ -52,7 +52,7 @@ public class LoginController {
                 stage.setTitle("Dashboard");
                 stage.show();
             } catch (Exception e) {
-                showAlert("Cannot load the Dashboard *sad passion noises*");
+                showAlert("Cannot load the Dashboard");
                 e.printStackTrace();
             }
             //Unhandled exception: java.io.IOException (since we have this error, chung ta se xai try-catch va hope no works xd)
