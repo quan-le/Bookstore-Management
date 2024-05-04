@@ -12,6 +12,10 @@ import javafx.stage.Stage;
 
 import javafx.scene.Scene;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
 public class LoginController {
 
     @FXML
@@ -29,6 +33,10 @@ public class LoginController {
     @FXML
     private TextField username;
 
+    private Connection connect;
+    private PreparedStatement prepare;
+    private ResultSet result;
+
     //this part will start handling the login events (new)
     @FXML
     private void handleLogin() {
@@ -39,7 +47,7 @@ public class LoginController {
             showAlert("Please enter your username and password");
         }
         else if (enteredUsername.equals("admin") && enteredPassword.equals("admin")) {
-            //Correct user name and password
+            //Correct username and password
 
             getData.username = username.getText();
 

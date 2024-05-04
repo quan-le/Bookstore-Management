@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.LineChart?>
-<?import javafx.scene.chart.NumberAxis?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="772.0" prefWidth="1071.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Bookstore_management.DashboardController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="772.0" prefWidth="1071.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Bookstore_management.DashboardController">
    <children>
       <AnchorPane fx:id="main_anchorPane" prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -140,7 +131,7 @@
                         </AnchorPane>
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="availableBook_anchorPane" prefHeight="735.0" prefWidth="777.0">
+                  <AnchorPane fx:id="availableBook_anchorPane" prefHeight="735.0" prefWidth="777.0" visible="false">
                      <children>
                         <AnchorPane layoutY="5.0" prefHeight="726.0" prefWidth="269.0">
                            <children>
@@ -187,21 +178,21 @@
                               <TextField fx:id="availableBook_price" alignment="CENTER_RIGHT" layoutX="104.0" layoutY="461.0" promptText="0.0$" />
                               <DatePicker fx:id="availableBook_publishDatePicker" layoutX="104.0" layoutY="416.0" prefHeight="25.0" prefWidth="149.0" />
                               <Button fx:id="availableBook_addBtn" layoutX="18.0" layoutY="564.0" mnemonicParsing="false" onAction="#availableBookAdd" prefHeight="55.0" prefWidth="111.0" text="Add" />
-                              <Button fx:id="availableBook_updateBtn" layoutX="139.0" layoutY="564.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="111.0" text="Update" />
+                              <Button fx:id="availableBook_updateBtn" layoutX="139.0" layoutY="564.0" mnemonicParsing="false" onAction="#availableBookUpdate" prefHeight="55.0" prefWidth="111.0" text="Update" />
                               <Button fx:id="availableBook_clearBtn" layoutX="17.0" layoutY="643.0" mnemonicParsing="false" onAction="#availableBookClear" prefHeight="55.0" prefWidth="111.0" text="Clear" />
-                              <Button fx:id="availableBook_deleteBtn" layoutX="141.0" layoutY="643.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="111.0" text="Delete" />
+                              <Button fx:id="availableBook_deleteBtn" layoutX="141.0" layoutY="643.0" mnemonicParsing="false" onAction="#availableBookDelete" prefHeight="55.0" prefWidth="111.0" text="Delete" />
                            </children>
                         </AnchorPane>
                         <AnchorPane layoutX="292.0" layoutY="3.0" prefHeight="726.0" prefWidth="493.0">
                            <children>
-                              <TextField fx:id="availableBook_search" layoutX="25.0" layoutY="14.0" prefHeight="36.0" prefWidth="481.0" promptText="SearchBar" />
+                              <TextField fx:id="availableBook_search" layoutX="25.0" layoutY="14.0" onKeyTyped="#availableBookSearch" prefHeight="36.0" prefWidth="481.0" promptText="SearchBar" />
                               <FontAwesomeIconView glyphName="SEARCH" layoutX="476.0" layoutY="39.0" size="20" />
                               <TableView fx:id="availableBook_tableView" layoutX="3.0" layoutY="85.0" onMouseClicked="#availableBookSelect" prefHeight="649.0" prefWidth="539.0">
                                 <columns>
                                   <TableColumn fx:id="availableBook_col_bookID" prefWidth="62.0" text="Book ID" />
                                   <TableColumn fx:id="availableBook_col_bookTitle" prefWidth="120.6666259765625" text="Book Title" />
                                     <TableColumn fx:id="availableBook_col_author" prefWidth="110.00003051757812" text="Author" />
-                                    <TableColumn fx:id="availableBook_col_genre" prefWidth="78.66668701171875" text="Gerne" />
+                                    <TableColumn fx:id="availableBook_col_genre" prefWidth="78.66668701171875" text="Genre" />
                                     <TableColumn fx:id="availableBook_col_publishDate" prefWidth="91.333251953125" text="Publish Date" />
                                     <TableColumn fx:id="availableBook_col_price" prefWidth="75.3333740234375" text="Price" />
                                 </columns>
@@ -210,7 +201,7 @@
                         </AnchorPane>
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="purchase_anchorPane" layoutX="7.0" layoutY="3.0" prefHeight="735.0" prefWidth="828.0" visible="false">
+                  <AnchorPane fx:id="purchase_anchorPane" layoutX="7.0" layoutY="3.0" prefHeight="735.0" prefWidth="828.0">
                      <children>
                         <AnchorPane prefHeight="261.0" prefWidth="828.0">
                            <children>
@@ -219,13 +210,13 @@
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <ComboBox fx:id="purchase_bookID" layoutX="135.0" layoutY="40.0" prefWidth="150.0" promptText="Choose Book ID" />
+                              <ComboBox fx:id="purchase_bookID" layoutX="135.0" layoutY="40.0" onAction="#purchaseBookID" prefWidth="150.0" promptText="Choose Book ID" />
                               <Label alignment="CENTER_RIGHT" layoutX="38.0" layoutY="79.0" text="Book Title:">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <ComboBox fx:id="purchase_bookTitle" layoutX="135.0" layoutY="80.0" prefWidth="150.0" promptText="choose Book Title" />
+                              <ComboBox fx:id="purchase_bookTitle" layoutX="135.0" layoutY="80.0" onAction="#purchaseBookTitle" prefWidth="150.0" promptText="choose Book Title" />
                               <Label alignment="CENTER_RIGHT" layoutX="51.0" layoutY="207.0" text="Total: ">
                                  <font>
                                     <Font size="18.0" />
@@ -245,7 +236,7 @@
                                           <Font size="16.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="purchase_info_bookID" layoutX="123.0" layoutY="21.0" prefHeight="25.0" prefWidth="287.0" style="-fx-background-color: #FFFFFF;" text="1">
+                                    <Label fx:id="purchase_info_bookID" layoutX="123.0" layoutY="21.0" prefHeight="25.0" prefWidth="287.0" style="-fx-background-color: #FFFFFF;">
                                        <font>
                                           <Font size="16.0" />
                                        </font>
@@ -255,7 +246,7 @@
                                           <Font size="16.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="purchase_info_bookTitle" layoutX="123.0" layoutY="60.0" prefHeight="25.0" prefWidth="287.0" style="-fx-background-color: #FFFFFF;" text="Title">
+                                    <Label fx:id="purchase_info_bookTitle" layoutX="123.0" layoutY="60.0" prefHeight="25.0" prefWidth="287.0" style="-fx-background-color: #FFFFFF;">
                                        <font>
                                           <Font size="16.0" />
                                        </font>
@@ -265,7 +256,7 @@
                                           <Font size="16.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="purchase_info_author" layoutX="123.0" layoutY="103.0" prefHeight="25.0" prefWidth="287.0" style="-fx-background-color: #FFFFFF;" text="Author">
+                                    <Label fx:id="purchase_info_author" layoutX="123.0" layoutY="103.0" prefHeight="25.0" prefWidth="287.0" style="-fx-background-color: #FFFFFF;">
                                        <font>
                                           <Font size="16.0" />
                                        </font>
@@ -275,7 +266,7 @@
                                           <Font size="16.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="purchase_info_genre" layoutX="123.0" layoutY="148.0" prefHeight="25.0" prefWidth="287.0" style="-fx-background-color: #FFFFFF;" text="Genre">
+                                    <Label fx:id="purchase_info_genre" layoutX="123.0" layoutY="148.0" prefHeight="25.0" prefWidth="287.0" style="-fx-background-color: #FFFFFF;">
                                        <font>
                                           <Font size="16.0" />
                                        </font>
@@ -285,7 +276,7 @@
                                           <Font size="16.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="purchase_info_date" layoutX="123.0" layoutY="191.0" prefHeight="25.0" prefWidth="287.0" style="-fx-background-color: #FFFFFF;" text="Date">
+                                    <Label fx:id="purchase_info_date" layoutX="123.0" layoutY="191.0" prefHeight="25.0" prefWidth="287.0" style="-fx-background-color: #FFFFFF;">
                                        <font>
                                           <Font size="16.0" />
                                        </font>
@@ -299,8 +290,8 @@
                               <TableColumn fx:id="purchase_col_bookID" prefWidth="53.333343505859375" text="Book ID" />
                               <TableColumn fx:id="purchase_col_bookTitle" prefWidth="236.66665649414062" text="Book Title" />
                               <TableColumn fx:id="purchase_col_author" prefWidth="205.33331298828125" text="Author" />
-                              <TableColumn fx:id="purchase_col_genre" prefWidth="72.6666259765625" text="Gerne" />
-                              <TableColumn fx:id="purchase_col_publishDate" prefWidth="147.3333740234375" text="Publish Date" />
+                              <TableColumn fx:id="purchase_col_genre" prefWidth="72.6666259765625" text="Genre" />
+                              <TableColumn fx:id="purchase_col_quantity" prefWidth="147.3333740234375" text="Quantity" />
                               <TableColumn fx:id="purchase_col_price" prefWidth="90.666748046875" text="Price" />
                            </columns>
                         </TableView>

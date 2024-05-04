@@ -1,6 +1,10 @@
 package com.example.Bookstore_management;
 
-import java.util.Date;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
+
+import java.sql.Date;
+import java.time.LocalDate;
 
 public class bookData {
 
@@ -8,17 +12,17 @@ public class bookData {
     private String title;
     private String author;
     private String genre;
-    private Date pub_date;
+    private Date pubDate;
     private Double price;
     private String image;
 
     public bookData(Integer bookId, String title, String author,
-                    String genre, Date date, Double price, String image){
+                    String genre, Date pubDate, Double price, String image){
         this.bookId = bookId;
         this.title = title;
         this.author = author;
         this.genre = genre;
-        this.pub_date = date;
+        this.pubDate = pubDate;
         this.price = price;
         this.image = image;
     }
@@ -39,8 +43,8 @@ public class bookData {
         return genre;
     }
 
-    public Date getDate() {
-        return pub_date;
+    public Date getPubDate(){
+        return pubDate;
     }
 
     public Double getPrice(){

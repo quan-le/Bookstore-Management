@@ -5,8 +5,7 @@ import java.sql.Connection;
 
 public class database {
 
-    public static Connection connectDb(){
-
+    public static Connection connectDb() {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/book", "root", "");
