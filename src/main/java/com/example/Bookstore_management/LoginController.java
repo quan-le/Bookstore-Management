@@ -9,7 +9,7 @@ import javafx.scene.control.Alert;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
-import java.io.IOException;
+
 import javafx.scene.Scene;
 
 public class LoginController {
@@ -39,6 +39,10 @@ public class LoginController {
             showAlert("Please enter your username and password");
         }
         else if (enteredUsername.equals("quanlebeo") && enteredPassword.equals("quangcuto")) {
+            //Correct user name and password
+
+            getData.username = username.getText();
+
             showAlert("Login successfully");
             //open the dashboard file xd
             try {
@@ -47,7 +51,7 @@ public class LoginController {
                 stage.setScene(new Scene(root));
                 stage.setTitle("Dashboard");
                 stage.show();
-            } catch (IOException e) {
+            } catch (Exception e) {
                 showAlert("Cannot load the Dashboard *sad passion noises*");
                 e.printStackTrace();
             }
@@ -56,6 +60,10 @@ public class LoginController {
         else {
             showAlert("Incorrect username/password, please enter your username and password");
         }
+    }
+
+    public void close(){
+        System.exit(0);
     }
 
     private void showAlert(String message) {
