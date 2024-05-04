@@ -5,12 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a1ea9d6-07ff-483b-bdb2-8401b5c4e540" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/mysql-connector-j-8.3.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/mysql-connector-java-5.1.48.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ojdbc10-19.22.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/protobuf-java-3.25.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Theory/Dashboard.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Theory/Login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/bookData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/getData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/Bookstore_management/Dashboard.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/Bookstore_management/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bookstore-Management/com/example/Bookstore_management/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bookstore-Management/com/example/Bookstore_management/Dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bookstore-Management/com/example/Bookstore_management/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bookstore-Management/com/example/Bookstore_management/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Dashboard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,14 +51,12 @@
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="0bd23908-67ce-4507-90f7-e4d4321411e8" />
-        <option name="url" value="https://github.com/quan-le/Bookstore-Management" />
-      </UrlAndAccount>
-    </option>
-  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/quan-le/Bookstore-Management.git&quot;,
+    &quot;accountId&quot;: &quot;6de6b080-7962-4f38-80ff-199207215b71&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/Theory/a3_Control.java" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -67,39 +77,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.a0_IntroductionGUI.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.example.Bookstore_management.Login.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mrngu/OneDrive/Documents/GitHub/Bookstore-Management/src/main/resources/com/example/Bookstore_management&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15057573&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.39624608&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.20588236&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.HelloApplication.executor": "Run",
+    "Application.a0_IntroductionGUI.executor": "Run",
+    "Application.com.example.Bookstore_management.Login (1).executor": "Run",
+    "Application.com.example.Bookstore_management.Login.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/BookShopManagementSystemProject/bookShopManagementSystem/dist/lib/ojdbc14-10.2.0.2.0.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15057573",
+    "project.structure.side.proportion": "0.39624608",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "settings.editor.splitter.proportion": "0.20588236"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\armyr\IdeaProjects\Bookstore-Management\src\main\java\com\example\Bookstore_management" />
+      <recent name="C:\Users\armyr\IdeaProjects\Bookstore-Management\src\main\resources\com\example\Bookstore_management" />
+      <recent name="C:\Users\armyr\IdeaProjects\Bookstore-Management\src\main\java\Theory" />
       <recent name="C:\Users\mrngu\OneDrive\Documents\GitHub\Bookstore-Management\src\main\resources\com\example\Bookstore_management" />
       <recent name="C:\Users\windows\OneDrive - VietNam National University - HCM INTERNATIONAL UNIVERSITY\Desktop\Programming\Java\Project\Bookstore\src\main\java\com\example\Bookstore_management" />
-      <recent name="C:\Users\windows\OneDrive - VietNam National University - HCM INTERNATIONAL UNIVERSITY\Desktop\Programming\Java\Project\Bookstore\src\main\java\Bookstore_management" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\armyr\IdeaProjects\Bookstore-Management\src\main\resources\com\example\Bookstore_management" />
       <recent name="C:\Users\mrngu\OneDrive\Documents\GitHub\Bookstore-Management\src\main\resources\com\example\Bookstore_management" />
       <recent name="C:\Users\mrngu\OneDrive\Documents\GitHub\Bookstore-Management\src\main\java\com\example\Bookstore_management" />
       <recent name="C:\Users\windows\OneDrive - VietNam National University - HCM INTERNATIONAL UNIVERSITY\Desktop\Programming\Java\Project\Bookstore\src\main\resources\com\example\Bookstore_management" />
@@ -111,7 +125,7 @@
       <recent name="Theory" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.example.Bookstore_management.Login">
+  <component name="RunManager" selected="Application.com.example.Bookstore_management.Login (1)">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Bookstore_management.HelloApplication" />
       <module name="Bookstore-Management" />
@@ -157,6 +171,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.example.Bookstore_management.Login (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.Bookstore_management.Login" />
+      <module name="Bookstore_Management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.Bookstore_management.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="com.example.Bookstore_management.Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Bookstore_management.Login" />
       <module name="Bookstore-Management" />
@@ -185,6 +212,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.com.example.Bookstore_management.Login (1)" />
         <item itemvalue="Application.com.example.Bookstore_management.Login" />
         <item itemvalue="Application.HelloApplication" />
         <item itemvalue="Application.a0_IntroductionGUI" />
@@ -224,6 +252,25 @@
           <properties class="java.lang.RuntimeException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Login.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/DashboardController.java</url>
+          <line>236</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/bookData.java</url>
+          <line>14</line>
+          <properties class="com.example.Bookstore_management.bookData" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
