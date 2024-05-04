@@ -39,7 +39,7 @@ public class LoginController {
             showAlert("Please enter your username and password");
         }
         else if (enteredUsername.equals("admin") && enteredPassword.equals("admin")) {
-            //Correct user name and password
+            //Correct username and password
 
             getData.username = username.getText();
 

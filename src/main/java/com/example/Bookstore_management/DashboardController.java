@@ -367,7 +367,6 @@ public class DashboardController {
             purchase_anchorPane.setVisible(false);
 
             availableBookShowListData();
-
         }
         if (event.getSource() == purchase_btn) {
             dashboard_anchorPane.setVisible(false);

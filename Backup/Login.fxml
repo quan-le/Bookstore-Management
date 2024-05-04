@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
 
-<StackPane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="742.0" prefWidth="1011.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Bookstore_management.LoginController">   <children>
+<StackPane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="742.0" prefWidth="1011.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Bookstore_management.LoginController">   <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
             <AnchorPane prefHeight="742.0" prefWidth="507.0" style="-fx-background-color: #40E0D0;">
                <children>
-                  <FontAwesomeIconView glyphName="BOOK" layoutX="134.0" layoutY="396.0" size="240" />
-                  <Label layoutX="51.0" layoutY="430.0" text="Welcome to the Bookstore">
+                  <FontAwesomeIconView glyphName="BOOK" layoutX="142.0" layoutY="395.0" size="240" />
+                  <Label layoutX="57.0" layoutY="430.0" prefHeight="49.0" prefWidth="394.0" text="Welcome to the Bookstore" wrapText="true">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="98.0" layoutY="479.0" prefHeight="49.0" prefWidth="309.0" text="Management System" textAlignment="CENTER" wrapText="true">
                      <font>
                         <Font size="33.0" />
                      </font>

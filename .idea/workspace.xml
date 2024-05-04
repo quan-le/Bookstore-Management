@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a1ea9d6-07ff-483b-bdb2-8401b5c4e540" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/mysql-connector-j-8.4.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/Dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/Login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/Bookstore_management/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/Bookstore_management/Dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/Bookstore_management/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/Bookstore_management/Login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +44,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/quan-le/Bookstore-Management.git&quot;,
-    &quot;accountId&quot;: &quot;6de6b080-7962-4f38-80ff-199207215b71&quot;
+    &quot;accountId&quot;: &quot;e77b735f-537f-4305-a914-e8fb4b144eb1&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
@@ -82,7 +86,7 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/BookShopManagementSystemProject/bookShopManagementSystem/dist/lib/ojdbc14-10.2.0.2.0.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15057573&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.39624608&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
@@ -99,6 +103,7 @@
       <recent name="C:\Users\windows\OneDrive - VietNam National University - HCM INTERNATIONAL UNIVERSITY\Desktop\Programming\Java\Project\Bookstore\src\main\java\com\example\Bookstore_management" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mrngu\IdeaProjects\Bookstore-Management\Backup" />
       <recent name="C:\Users\armyr\IdeaProjects\Bookstore-Management\src\main\resources\com\example\Bookstore_management" />
       <recent name="C:\Users\mrngu\OneDrive\Documents\GitHub\Bookstore-Management\src\main\resources\com\example\Bookstore_management" />
       <recent name="C:\Users\mrngu\OneDrive\Documents\GitHub\Bookstore-Management\src\main\java\com\example\Bookstore_management" />
@@ -111,7 +116,7 @@
       <recent name="Theory" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.com.example.Bookstore_management.Login (1)">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Bookstore_management.HelloApplication" />
       <module name="Bookstore-Management" />
@@ -242,20 +247,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Login.java</url>
           <line>21</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/DashboardController.java</url>
-          <line>236</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/bookData.java</url>
-          <line>14</line>
-          <properties class="com.example.Bookstore_management.bookData" method="&lt;init&gt;">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
