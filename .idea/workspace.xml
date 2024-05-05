@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a1ea9d6-07ff-483b-bdb2-8401b5c4e540" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/Dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/Bookstore_management/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/Bookstore_management/Dashboard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/Bookstore_management/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/Bookstore_management/Login.fxml" afterDir="false" />
     </list>
