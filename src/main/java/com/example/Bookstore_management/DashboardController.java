@@ -1,10 +1,7 @@
 package com.example.Bookstore_management;
 
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.collections.transformation.FilteredList;
-import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
@@ -15,16 +12,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.image.Image;
 import javafx.stage.FileChooser;
 
-import java.awt.print.Book;
-import java.util.*;
 import java.sql.Statement;
 import java.io.File;
 import java.net.URL;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.time.LocalDate;
+import java.util.ResourceBundle;
 import java.sql.Connection;
-import java.util.stream.Stream;
 
 
 public class DashboardController {
@@ -66,7 +61,7 @@ public class DashboardController {
     private TableColumn<bookData, String> availableBook_col_price;
 
     @FXML
-    private TableColumn<bookData, String> availableBook_col_publishDate;
+    private TableColumn<bookData, LocalDate> availableBook_col_publishDate;
 
     @FXML
     private Button availableBook_deleteBtn;
@@ -132,22 +127,22 @@ public class DashboardController {
     private Button purchase_btn;
 
     @FXML
-    private TableColumn<customerData, String> purchase_col_author;
+    private TableColumn<?, ?> purchase_col_author;
 
     @FXML
-    private TableColumn<customerData, String> purchase_col_bookID;
+    private TableColumn<?, ?> purchase_col_bookID;
 
     @FXML
-    private TableColumn<customerData, String> purchase_col_bookTitle;
+    private TableColumn<?, ?> purchase_col_bookTitle;
 
     @FXML
-    private TableColumn<customerData, String> purchase_col_genre;
+    private TableColumn<?, ?> purchase_col_genre;
 
     @FXML
-    private TableColumn<customerData, String> purchase_col_price;
+    private TableColumn<?, ?> purchase_col_price;
 
     @FXML
-    private TableColumn<customerData, String> purchase_col_quantity;
+    private TableColumn<?, ?> purchase_col_publishDate;
 
     @FXML
     private Label purchase_info_author;
@@ -168,7 +163,7 @@ public class DashboardController {
     private Button purchase_payBtn;
 
     @FXML
-    private TableView<customerData> purchase_tableView;
+    private TableView<?> purchase_tableView;
 
     @FXML
     private Label username;
@@ -182,7 +177,7 @@ public class DashboardController {
 
     public void availableBookAdd(){
 
-        String sql = "INSERT INTO book (book_id, title, author, genre, pubDate, price, image) "
+        String sql = "INSERT INTO book (book_id, title, author, genre, pub_date, price, image) "
                 + "VALUES(?,?,?,?,?,?,?)";
 
         connect = database.connectDb();
@@ -196,7 +191,7 @@ public class DashboardController {
                     || availableBook_bookGenre.getText().isEmpty()
                     || availableBook_publishDatePicker.getValue() == null
                     || availableBook_price.getText().isEmpty()
-                    || getData.path == null || getData.path == ""){
+                    || getData.path == null || getData.path.isEmpty()){
                 alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error Message");
                 alert.setHeaderText(null);
@@ -255,99 +250,14 @@ public class DashboardController {
         String sql = "UPDATE book SET title = '"
                 + availableBook_bookTitle.getText() + "', author = '"
                 + availableBook_bookAuthor.getText() + "', genre = '"
-                + availableBook_bookGenre.getText() + "', pubDate = '"
+                + availableBook_bookGenre.getText() + "', pub_date = '"
                 + availableBook_publishDatePicker.getValue() + "', price = '"
                 + availableBook_price.getText() + "', image = '"
-                + uri +"' WHERE book_id = '" + availableBook_bookID.getText() + "'";
+                + uri +"'";
 
         connect = database.connectDb();
 
         try{
-            Alert alert;
-
-            if(availableBook_bookID.getText().isEmpty()
-                    || availableBook_bookTitle.getText().isEmpty()
-                    || availableBook_bookAuthor.getText().isEmpty()
-                    || availableBook_bookGenre.getText().isEmpty()
-                    || availableBook_publishDatePicker.getValue() == null
-                    || availableBook_price.getText().isEmpty()
-                    || getData.path == null || getData.path == "") {
-                alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Error Message");
-                alert.setHeaderText(null);
-                alert.setContentText("fields cannot be empty");
-                alert.showAndWait();
-            }else{
-                alert = new Alert(Alert.AlertType.CONFIRMATION);
-                alert.setTitle("Confirmation Message");
-                alert.setHeaderText(null);
-                alert.setContentText("Do you want to UPDATE Book ID: " + availableBook_bookID.getText() + "?");
-                Optional<ButtonType> option = alert.showAndWait();
-
-                if(option.get().equals(ButtonType.OK)) {
-                    statement = connect.createStatement();
-                    statement.executeUpdate(sql);
-
-                    alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setTitle("Information Message");
-                    alert.setHeaderText(null);
-                    alert.setContentText("Update Success!");
-                    alert.showAndWait();
-
-                    //update table
-                    availableBookShowListData();
-                    //clear fields
-                    availableBookClear();
-                }
-            }
-        }catch(Exception e) {e.printStackTrace();}
-    }
-
-    public void availableBookDelete(){
-
-        String sql = "DELETE FROM book WHERE book_id = '" + availableBook_bookID.getText() + "'";
-
-        connect = database.connectDb();
-
-        try{
-            Alert alert;
-
-            if(availableBook_bookID.getText().isEmpty()
-                    || availableBook_bookTitle.getText().isEmpty()
-                    || availableBook_bookAuthor.getText().isEmpty()
-                    || availableBook_bookGenre.getText().isEmpty()
-                    || availableBook_publishDatePicker.getValue() == null
-                    || availableBook_price.getText().isEmpty()
-                    || getData.path == null || getData.path == "") {
-                alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Error Message");
-                alert.setHeaderText(null);
-                alert.setContentText("fields cannot be empty");
-                alert.showAndWait();
-            }else{
-                alert = new Alert(Alert.AlertType.CONFIRMATION);
-                alert.setTitle("Confirmation Message");
-                alert.setHeaderText(null);
-                alert.setContentText("Do you want to DELETE Book ID: " + availableBook_bookID.getText() + "?");
-                Optional<ButtonType> option = alert.showAndWait();
-
-                if(option.get().equals(ButtonType.OK)) {
-                    statement = connect.createStatement();
-                    statement.executeUpdate(sql);
-
-                    alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setTitle("Information Message");
-                    alert.setHeaderText(null);
-                    alert.setContentText("Deletion Success!");
-                    alert.showAndWait();
-
-                    //update table
-                    availableBookShowListData();
-                    //clear fields
-                    availableBookClear();
-                }
-            }
-
 
         }catch(Exception e) {e.printStackTrace();}
 
@@ -400,7 +310,7 @@ public class DashboardController {
 
             while(result.next()) {
                 bookD = new bookData(result.getInt("book_id"), result.getString("title")
-                        , result.getString("author"), result.getString("genre"), result.getDate("pubDate")
+                        , result.getString("author"), result.getString("genre"), result.getDate("pub_date")
                         , result.getDouble("price"), result.getString("image"));
 
                 listData.add(bookD);
@@ -413,18 +323,15 @@ public class DashboardController {
     public void availableBookShowListData(){
         availableBookList = availableBookListData();
 
-
         availableBook_col_bookID.setCellValueFactory(new PropertyValueFactory<>("bookId"));
         availableBook_col_bookTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
         availableBook_col_author.setCellValueFactory(new PropertyValueFactory<>("author"));
         availableBook_col_genre.setCellValueFactory(new PropertyValueFactory<>("genre"));
-        availableBook_col_publishDate.setCellValueFactory(new PropertyValueFactory<>("pubDate"));
+        availableBook_col_publishDate.setCellValueFactory(new PropertyValueFactory<>("pub_date"));
         availableBook_col_price.setCellValueFactory(new PropertyValueFactory<>("price"));
 
         availableBook_tableView.setItems(availableBookList);
     }
-
-
 
     public void availableBookSelect(){
         bookData bookD = availableBook_tableView.getSelectionModel().getSelectedItem();
@@ -438,226 +345,13 @@ public class DashboardController {
         availableBook_bookTitle.setText(bookD.getTitle());
         availableBook_bookAuthor.setText(bookD.getAuthor());
         availableBook_bookGenre.setText(bookD.getGenre());
-        availableBook_publishDatePicker.setValue(LocalDate.parse(String.valueOf(bookD.getPubDate())));
+        availableBook_publishDatePicker.setValue(LocalDate.parse(String.valueOf(bookD.getDate())));
         availableBook_price.setText(String.valueOf(bookD.getPrice()));
-
-        getData.path = bookD.getImage();
 
         String uri = "file:" + bookD.getImage();
 
         image = new Image(uri, 146, 161, false, true);
         availableBook_imgView.setImage(image);
-    }
-
-    public void availableBookSearch() {
-        if (availableBookList == null) {
-            // Initialize availableBookList if it's null
-            availableBookList = availableBookListData();
-        }
-
-        FilteredList<bookData> filter = new FilteredList<>(availableBookList, e -> true);
-
-        availableBook_search.textProperty().addListener((observable, oldValue, newValue) -> {
-            filter.setPredicate(predicateBookData -> {
-                if (newValue == null || newValue.isEmpty()) {
-                    return true;
-                }
-
-                String searchKey = newValue.toLowerCase();
-
-                // Use a more concise way to check if any of the fields contain the search key
-                return Stream.of(
-                        predicateBookData.getBookId().toString(),
-                        predicateBookData.getTitle().toLowerCase(),
-                        predicateBookData.getAuthor().toLowerCase(),
-                        predicateBookData.getGenre().toLowerCase(),
-                        (predicateBookData.getPubDate() != null ? predicateBookData.getPubDate().toString() : "").toLowerCase(),
-                        predicateBookData.getPrice().toString().toLowerCase()
-                ).anyMatch(field -> field.contains(searchKey));
-            });
-        });
-
-        // Create a SortedList with the filtered data
-        SortedList<bookData> sortList = new SortedList<>(filter);
-        sortList.comparatorProperty().bind(availableBook_tableView.comparatorProperty());
-        availableBook_tableView.setItems(sortList);
-    }
-
-    public void purchaseBookID(){
-
-        String sql = "SELECT book_id FROM book";
-
-        connect = database.connectDb();
-
-        try{
-            prepare = connect.prepareStatement(sql);
-            result = prepare.executeQuery();
-
-            ObservableList listData = FXCollections.observableArrayList();
-
-            while(result.next()){
-                listData.add(result.getString("book_id"));
-            }
-
-            purchase_bookID.setItems(listData);
-            purchaseBookTitle();
-
-        }catch(Exception e) {e.printStackTrace();}
-
-    }
-
-    public void purchaseBookTitle(){
-
-        String sql = "SELECT book_id, title FROM book WHERE book_id = '"
-                + purchase_bookID.getSelectionModel().getSelectedItem() + "'";
-
-        connect = database.connectDb();
-
-        try{
-
-            prepare = connect.prepareStatement(sql);
-            result = prepare.executeQuery();
-
-            ObservableList listData = FXCollections.observableArrayList();
-
-            while(result.next()){
-                listData.add(result.getString("title"));
-            }
-
-            purchase_bookTitle.setItems(listData);
-
-            purchaseBookInfo();
-
-        }catch(Exception e) {e.printStackTrace();}
-
-    }
-
-    public void purchaseBookInfo(){
-
-        String sql = "SELECT * FROM book WHERE title = '"
-                    + purchase_bookTitle.getSelectionModel().getSelectedItem() + "'";
-
-        connect = database.connectDb();
-
-        String bookId = "";
-        String title = "";
-        String author = "";
-        String genre = "";
-        String pub_date = "";
-
-
-
-        try{
-
-            prepare = connect.prepareStatement(sql);
-            result = prepare.executeQuery();
-
-            if(result.next()){
-                bookId = result.getString("book_id");
-                title = result.getString("title");
-                author = result.getString("author");
-                genre = result.getString("genre");
-                pub_date = result.getString("pubDate");
-            }
-
-            purchase_info_bookID.setText(bookId);
-            purchase_info_bookTitle.setText(title);
-            purchase_info_author.setText(author);
-            purchase_info_genre.setText(genre);
-            purchase_info_date.setText(pub_date);
-
-        }catch(Exception e) {e.printStackTrace();}
-
-    }
-
-    public ObservableList<customerData> purchaseListData(){
-        purchaseCustomerId();
-        String sql = "SELECT * FROM customer WHERE customer_id = '" + customerId + "'";
-
-        ObservableList<customerData> listData = FXCollections.observableArrayList();
-
-        connect = database.connectDb();
-
-        try{
-
-            prepare = connect.prepareStatement(sql);
-            result = prepare.executeQuery();
-
-            customerData customerD;
-
-            while(result.next()){
-                customerD = new customerData(result.getInt("customer_id")
-                            , result.getInt("book_id")
-                            , result.getString("title")
-                            , result.getString("author")
-                            , result.getString("genre")
-                            , result.getInt("quantity")
-                            , result.getDouble("price")
-                            , result.getDate("date"));
-
-                listData.add(customerD);
-            }
-
-        }catch(Exception e) {e.printStackTrace();}
-        return listData;
-    }
-
-    private ObservableList<customerData> purchaseCustomerList;
-    public void purchaseShowCustomerListData(){
-        purchaseCustomerList = purchaseListData();
-
-        purchase_col_bookID.setCellValueFactory(new PropertyValueFactory<>("book_id"));
-        purchase_col_bookTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
-        purchase_col_author.setCellValueFactory(new PropertyValueFactory<>("author"));
-        purchase_col_genre.setCellValueFactory(new PropertyValueFactory<>("genre"));
-        purchase_col_quantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
-        purchase_col_price.setCellValueFactory(new PropertyValueFactory<>("price"));
-
-        purchase_tableView.setItems(purchaseCustomerList);
-
-    }
-
-    private int customerId;
-    public void purchaseCustomerId(){
-
-        String sql = "SELECT customer_id FROM customer";
-        int checkCID = 0;
-
-        connect = database.connectDb();
-
-        try{
-
-            prepare = connect.prepareStatement(sql);
-            result = prepare.executeQuery();
-
-            if(result.next()){
-                customerId = result.getInt("MAX(customer_id");
-            }
-
-            String checkData = "SELECT MAX(customer_id FROM customer_info)";
-
-            prepare = connect.prepareStatement(checkData);
-            result = prepare.executeQuery();
-
-            if(result.next()){
-                checkCID = result.getInt("MAX(customer_id");
-            }
-
-            if(customerId == 0){
-                customerId += 1;
-            }else if(checkCID == customerId){
-                customerId = checkCID + 1;
-            }
-
-        }catch(Exception e) {e.printStackTrace();}
-
-    }
-
-
-    public void displayUsername(){
-        String user = getData.username;
-        user = user.substring(0, 1).toUpperCase() + user.substring(1);
-        username.setText(user);
     }
 
     @FXML
@@ -673,26 +367,12 @@ public class DashboardController {
             purchase_anchorPane.setVisible(false);
 
             availableBookShowListData();
-            availableBookSearch();
+
         }
         if (event.getSource() == purchase_btn) {
             dashboard_anchorPane.setVisible(false);
             availableBook_anchorPane.setVisible(false);
             purchase_anchorPane.setVisible(true);
-
-            purchaseBookID();
-            purchaseBookTitle();
-            purchaseShowCustomerListData();
         }
-    }
-
-    public void initialized(URL location, ResourceBundle resources){
-        displayUsername();
-
-        availableBookShowListData();
-
-        purchaseBookID();
-        purchaseBookTitle();
-        purchaseShowCustomerListData();
     }
 }

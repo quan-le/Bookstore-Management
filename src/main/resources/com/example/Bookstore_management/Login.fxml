@@ -12,32 +12,27 @@
 <StackPane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="742.0" prefWidth="1011.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Bookstore_management.LoginController">   <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <AnchorPane prefHeight="742.0" prefWidth="507.0" style="-fx-background-color: #00203FFF;">
+            <AnchorPane prefHeight="742.0" prefWidth="507.0" style="-fx-background-color: #40E0D0;">
                <children>
-                  <FontAwesomeIconView fill="#adefd1" glyphName="BOOK" layoutX="142.0" layoutY="395.0" size="240" />
-                  <Label layoutX="57.0" layoutY="430.0" prefHeight="49.0" prefWidth="394.0" text="Welcome to the Bookstore" textFill="#adefd1" wrapText="true">
-                     <font>
-                        <Font size="33.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="98.0" layoutY="479.0" prefHeight="49.0" prefWidth="309.0" text="Management System" textAlignment="CENTER" textFill="#adefd1" wrapText="true">
+                  <FontAwesomeIconView glyphName="BOOK" layoutX="134.0" layoutY="396.0" size="240" />
+                  <Label layoutX="51.0" layoutY="430.0" text="Welcome to the Bookstore">
                      <font>
                         <Font size="33.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="507.0" layoutY="-1.0" prefHeight="743.0" prefWidth="507.0" style="-fx-background-color: #ADEFD1FF;">
+            <AnchorPane layoutX="507.0" layoutY="-1.0" prefHeight="743.0" prefWidth="507.0" style="-fx-background-color: D2B48C;">
                <children>
-                  <FontAwesomeIconView fill="#00203f" glyphName="USER" layoutX="211.0" layoutY="250.0" size="120" />
-                  <Label layoutX="149.0" layoutY="267.0" text="Admin - Login" textFill="#00203f">
+                  <FontAwesomeIconView glyphName="USER" layoutX="211.0" layoutY="250.0" size="120" />
+                  <Label layoutX="149.0" layoutY="267.0" text="Admin - Login">
                      <font>
                         <Font size="33.0" />
                      </font>
                   </Label>
                   <TextField fx:id="username" layoutX="143.0" layoutY="372.0" prefHeight="35.0" prefWidth="223.0" promptText="Username" />
                   <PasswordField fx:id="password" layoutX="143.0" layoutY="419.0" prefHeight="35.0" prefWidth="223.0" promptText="Password" />
-                  <Button fx:id="loginBut" layoutX="215.0" layoutY="473.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #42EADDFF;" text="Login" textFill="#00203f" />
+                  <Button fx:id="loginBut" layoutX="215.0" layoutY="473.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="35.0" prefWidth="75.0" text="Login" />
                   <Button fx:id="close" layoutX="480.0" layoutY="1.0" mnemonicParsing="false">
                      <graphic>
                         <FontAwesomeIconView glyphName="CLOSE" size="15" text="" />

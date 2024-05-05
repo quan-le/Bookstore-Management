@@ -24,9 +24,9 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="841.0" layoutY="35.0" prefHeight="743.0" prefWidth="232.0" style="-fx-background-color: #D2B48C;">
+            <AnchorPane layoutX="839.0" layoutY="35.0" prefHeight="743.0" prefWidth="232.0" style="-fx-background-color: #D2B48C;">
                <children>
-                  <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="73.0" layoutY="140.0" size="120" />
+                  <FontAwesomeIconView glyphName="USER" layoutX="73.0" layoutY="140.0" selectionFill="BLACK" size="120" />
                   <Label layoutX="48.0" layoutY="157.0" text="Welcome Back ! ">
                      <font>
                         <Font size="20.0" />
@@ -64,9 +64,9 @@
                   </Button>
                </children>
             </AnchorPane>
-            <AnchorPane layoutY="35.0" prefHeight="743.0" prefWidth="839.0" style="-fx-background-color: #daf4f0;">
+            <AnchorPane layoutY="35.0" prefHeight="743.0" prefWidth="839.0" style="-fx-background-color: #ADEFD1FF;">
                <children>
-                  <AnchorPane fx:id="dashboard_anchorPane" layoutX="3.0" layoutY="4.0" prefHeight="735.0" prefWidth="835.0" visible="false">
+                  <AnchorPane fx:id="dashboard_anchorPane" layoutX="3.0" layoutY="4.0" prefHeight="735.0" prefWidth="835.0" style="-fx-background-color: #ADEFD1FF;">
                      <children>
                         <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="817.0">
                            <children>
@@ -137,7 +137,7 @@
                            <children>
                               <AnchorPane layoutX="57.0" layoutY="14.0" prefHeight="200.0" prefWidth="149.0">
                                  <children>
-                                    <Button fx:id="availableBook_importBtn" layoutX="39.0" layoutY="171.0" mnemonicParsing="false" onAction="#availableBookInsertImage" prefHeight="30.0" prefWidth="71.0" text="Import" />
+                                    <Button fx:id="availableBook_importBtn" layoutX="28.0" layoutY="172.0" mnemonicParsing="false" onAction="#availableBookInsertImage" prefHeight="30.0" prefWidth="93.0" text="Import Cover" />
                                     <ImageView fx:id="availableBook_imgView" fitHeight="161.0" fitWidth="146.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
                                  </children>
                               </AnchorPane>
