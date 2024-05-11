@@ -12,7 +12,7 @@
 <StackPane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="742.0" prefWidth="1011.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Bookstore_management.LoginController">   <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <AnchorPane prefHeight="742.0" prefWidth="507.0" style="-fx-background-color: #40E0D0;">
+            <AnchorPane prefHeight="742.0" prefWidth="507.0" style="-fx-background-color: #a0d6b4;">
                <children>
                   <FontAwesomeIconView glyphName="BOOK" layoutX="134.0" layoutY="396.0" size="240" />
                   <Label layoutX="51.0" layoutY="430.0" text="Welcome to the Bookstore">
@@ -24,7 +24,7 @@
             </AnchorPane>
             <AnchorPane layoutX="507.0" layoutY="-1.0" prefHeight="743.0" prefWidth="507.0" style="-fx-background-color: D2B48C;">
                <children>
-                  <FontAwesomeIconView glyphName="USER" layoutX="211.0" layoutY="250.0" size="120" />
+                  <FontAwesomeIconView glyphName="USER" layoutX="211.0" layoutY="250.0" size="120" text="" />
                   <Label layoutX="149.0" layoutY="267.0" text="Admin - Login">
                      <font>
                         <Font size="33.0" />

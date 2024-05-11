@@ -105,6 +105,15 @@ public class DashboardController implements Initializable {
     private Button availableBooks_btn;
 
     @FXML
+    private ImageView icon1;
+
+    @FXML
+    private ImageView icon2;
+
+    @FXML
+    private ImageView icon3;
+
+    @FXML
     private AnchorPane dashboard_anchorPane;
 
     @FXML
