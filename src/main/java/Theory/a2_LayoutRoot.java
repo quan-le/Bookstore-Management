@@ -39,7 +39,7 @@ public class a2_LayoutRoot extends Application
             root.getChildren().add(bt3);
             root.getChildren().add(bt4);
             root.getChildren().add(bt2);
-            root.getChildren().addAll(bt1,bt2,bt3,bt4);
+            //root.getChildren().addAll(bt1,bt2,bt3,bt4);
             root.setSpacing(20);                // Add space bewtween them (optimal for HBox Vbox)
 
         StackPane root2 = new StackPane();      // Stack Pane: place content in a back-to-front single stack (overlap eachother)
@@ -53,18 +53,25 @@ public class a2_LayoutRoot extends Application
                 root4.setVgap(20);
                 root4.setGridLinesVisible(true);
 
-        BorderPane root5 = new BorderPane();    // Border Pane:  put it content nodes in top, bottom, right, left, center region
+        BorderPane root5 = new BorderPane();    // Border Pane: put it content nodes in top, bottom, right, left, center region
                 root5.setBottom(bt1);
                 root5.setTop(bt2);
                 root5.setCenter(bt3);
 
-        //add layout to Scene, scene take input layout
-        sc = new Scene(root);
+        //-------Adding button to pane-------
+        StackPane stckPane = new StackPane();
+        Button stckBtn = new Button("stackPane Button");
+        stckPane.getChildren().add(stckBtn);
+
+        //add layout to Scene, the scene takes input layout
+        sc = new Scene(stckPane);
+
 
 
         //add Scene to Stage
         stage.setScene(sc);
         stage.setTitle("Click me Program");     // set title for stage
+        stage.setMaximized(true);
         stage.show();                           // Important: display the stage
 
     }

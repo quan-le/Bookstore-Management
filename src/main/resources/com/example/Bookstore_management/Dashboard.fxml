@@ -187,7 +187,7 @@
                               <TextField fx:id="availableBook_price" alignment="CENTER_RIGHT" layoutX="104.0" layoutY="461.0" promptText="0.0$" />
                               <DatePicker fx:id="availableBook_publishDatePicker" layoutX="104.0" layoutY="416.0" prefHeight="25.0" prefWidth="149.0" />
                               <Button fx:id="availableBook_addBtn" layoutX="18.0" layoutY="564.0" mnemonicParsing="false" onAction="#availableBookAdd" prefHeight="55.0" prefWidth="111.0" text="Add" />
-                              <Button fx:id="availableBook_updateBtn" layoutX="139.0" layoutY="564.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="111.0" text="Update" />
+                              <Button fx:id="availableBook_updateBtn" layoutX="139.0" layoutY="564.0" mnemonicParsing="false" onAction="#availableBookUpdate" prefHeight="55.0" prefWidth="111.0" text="Update" />
                               <Button fx:id="availableBook_clearBtn" layoutX="17.0" layoutY="643.0" mnemonicParsing="false" onAction="#availableBookClear" prefHeight="55.0" prefWidth="111.0" text="Clear" />
                               <Button fx:id="availableBook_deleteBtn" layoutX="141.0" layoutY="643.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="111.0" text="Delete" />
                            </children>

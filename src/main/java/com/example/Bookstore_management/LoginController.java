@@ -41,7 +41,7 @@ public class LoginController {
         else if (enteredUsername.equals("admin") && enteredPassword.equals("admin")) {
             //Correct user name and password
 
-            getData.username = username.getText();
+            //getData.username = username.getText();
 
             showAlert("Login successfully");
             //open the dashboard file xd
