@@ -5,12 +5,17 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Alert;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
 
 import javafx.scene.Scene;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class LoginController {
 
@@ -29,6 +34,7 @@ public class LoginController {
     @FXML
     private TextField username;
 
+
     //this part will start handling the login events (new)
     @FXML
     private void handleLogin() {
@@ -39,7 +45,7 @@ public class LoginController {
             showAlert("Please enter your username and password");
         }
         else if (enteredUsername.equals("admin") && enteredPassword.equals("admin")) {
-            //Correct user name and password
+            //Correct username and password
 
             //getData.username = username.getText();
 
@@ -67,7 +73,7 @@ public class LoginController {
     }
 
     private void showAlert(String message) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("Login");
         alert.setHeaderText(null);
         alert.setContentText(message);

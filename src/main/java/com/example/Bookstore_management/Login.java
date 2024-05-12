@@ -1,11 +1,16 @@
 package com.example.Bookstore_management;
 
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.control.Alert;
 import javafx.fxml.FXMLLoader;
@@ -21,12 +26,13 @@ public class Login extends Application {
     public static void main(String[] args) {
         launch(); //mandatory
     }
+
     public Scene sc;
 
     @Override
     public void start(Stage stage) throws Exception {
         //-----------------Load fxml file into Root--------------------
-        System.out.println( "loading login.fxml "+ getClass().getResource("Login.fxml"));
+        System.out.println("loading login.fxml " + getClass().getResource("Login.fxml"));
 
         //Load using filestream
         //String address = "src/main/java/Theory/s.fxml";
