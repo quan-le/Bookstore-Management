@@ -1,10 +1,8 @@
-package Theory;
+package JavaFX_Theory;
 
 import javafx.application.Application;
 
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.control.*;
 
@@ -13,7 +11,6 @@ import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 public class a3_Control extends Application
 {

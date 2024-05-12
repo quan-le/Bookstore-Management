@@ -1,13 +1,11 @@
-package Theory;
+package JavaFX_Theory;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-import java.io.IOException;
 
 import javafx.scene.control.Button;
-import javafx.scene.control.*;
 
 public class a0_IntroductionGUI extends Application
 {

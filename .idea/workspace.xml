@@ -158,7 +158,7 @@
       <module name="Bookstore_Management" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Theory.*" />
+          <option name="PATTERN" value="JavaFX_Theory.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -173,11 +173,11 @@
       </method>
     </configuration>
     <configuration name="a0_IntroductionGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Theory.a0_IntroductionGUI" />
+      <option name="MAIN_CLASS_NAME" value="JavaFX_Theory.a0_IntroductionGUI" />
       <module name="Bookstore_Management" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Theory.*" />
+          <option name="PATTERN" value="JavaFX_Theory.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

@@ -13,7 +13,7 @@ module com.example.bookstore_management {
     opens com.example.Bookstore_management to javafx.fxml;
     exports com.example.Bookstore_management;
     //exports Theory to javafx.graphics;
-    opens Theory to javafx.fxml, javafx.graphics;
-    exports Theory;
+    opens JavaFX_Theory to javafx.fxml, javafx.graphics;
+    exports JavaFX_Theory;
 
 }

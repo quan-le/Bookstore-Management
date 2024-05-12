@@ -1,4 +1,4 @@
-package Theory;
+package JavaFX_Theory;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

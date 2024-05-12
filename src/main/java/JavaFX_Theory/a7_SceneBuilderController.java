@@ -1,4 +1,4 @@
-package Theory;
+package JavaFX_Theory;
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.fxml.FXML;
