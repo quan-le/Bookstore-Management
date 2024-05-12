@@ -34,9 +34,6 @@ public class LoginController {
     @FXML
     private TextField username;
 
-    private Connection connect;
-    private PreparedStatement prepare;
-    private ResultSet result;
 
     //this part will start handling the login events (new)
     @FXML

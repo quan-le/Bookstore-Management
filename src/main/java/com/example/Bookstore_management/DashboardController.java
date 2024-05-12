@@ -6,12 +6,7 @@ import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.chart.LineChart;
-import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
@@ -20,19 +15,13 @@ import javafx.scene.image.Image;
 import javafx.stage.FileChooser;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Alert;
-import javafx.stage.Stage;
 
-import javax.swing.*;
-import java.util.*;
 import java.sql.*;
 import java.io.File;
 import java.net.URL;
-import java.time.Instant;
 import java.time.LocalDate;
 import java.util.Optional;
 import java.util.ResourceBundle;
-import java.util.function.Predicate;
-import java.util.stream.Stream;
 import java.util.Date;
 
 
@@ -204,7 +193,7 @@ public class DashboardController implements Initializable {
 
     private Image image;
 
-    public void dashboardAB(){
+    public void dashboardAB() throws SQLException {
 
         String sql = "SELECT COUNT(id) FROM book";
 
@@ -223,7 +212,7 @@ public class DashboardController implements Initializable {
         }catch(Exception e){e.printStackTrace();}
     }
 
-    public void dashboardTI(){
+    public void dashboardTI() throws SQLException {
 
         String sql = "SELECT SUM(total) FROM customer_info";
 
@@ -242,7 +231,7 @@ public class DashboardController implements Initializable {
         }catch(Exception e){e.printStackTrace();}
     }
 
-    public void dashboardTC(){
+    public void dashboardTC() throws SQLException {
         String sql = "SELECT COUNT(id) FROM customer_info";
 
         connect = database.connectDb();
@@ -262,7 +251,7 @@ public class DashboardController implements Initializable {
     }
 
 
-    public void availableBookAdd(){
+    public void availableBookAdd() throws SQLException {
 
         String sql = "INSERT INTO book (book_id, title, author, genre, pubDate, price, image) "
                 + "VALUES(?,?,?,?,?,?,?)";
@@ -279,11 +268,7 @@ public class DashboardController implements Initializable {
                     || availableBook_publishDatePicker.getValue() == null
                     || availableBook_price.getText().isEmpty()
                     || getData.path == null || getData.path == ""){
-                alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Error Message");
-                alert.setHeaderText(null);
-                alert.setContentText("Please fill all blank fields");
-                alert.showAndWait();
+                showErrorMessage("Please fill in all blank field!");
             }else{
                 // CHECK IF BOOK ID IS ALREADY EXIST
                 String checkData = "SELECT book_id FROM book WHERE book_id = '"
@@ -293,11 +278,7 @@ public class DashboardController implements Initializable {
                 result = statement.executeQuery(checkData);
 
                 if(result.next()){
-                    alert = new Alert(AlertType.ERROR);
-                    alert.setTitle("Error Message");
-                    alert.setHeaderText(null);
-                    alert.setContentText("Book ID: " + availableBook_bookID.getText() + " was already exist!");
-                    alert.showAndWait();
+                    showErrorMessage("Book ID: " + availableBook_bookID.getText() + " already exist!");
                 }else{
 
                     prepare = connect.prepareStatement(sql);
@@ -315,11 +296,7 @@ public class DashboardController implements Initializable {
 
                     prepare.executeUpdate();
 
-                    alert = new Alert(AlertType.INFORMATION);
-                    alert.setTitle("Information Message");
-                    alert.setHeaderText(null);
-                    alert.setContentText("Successfully Added!");
-                    alert.showAndWait();
+                    showMessage("Book Added!");
 
                     // TO BE UPDATED THE TABLEVIEW
                     availableBookShowListData();
@@ -331,7 +308,7 @@ public class DashboardController implements Initializable {
 
     }
 
-    public void availableBookUpdate(){
+    public void availableBookUpdate() throws SQLException {
 
         String uri = getData.path;
         uri = uri.replace("\\", "\\\\");
@@ -356,11 +333,7 @@ public class DashboardController implements Initializable {
                     || availableBook_publishDatePicker.getValue() == null
                     || availableBook_price.getText().isEmpty()
                     || getData.path == null || getData.path == ""){
-                alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Error Message");
-                alert.setHeaderText(null);
-                alert.setContentText("Please fill all blank fields");
-                alert.showAndWait();
+                showErrorMessage("Please fill all blank fields");
             }else{
                 alert = new Alert(AlertType.CONFIRMATION);
                 alert.setTitle("Confirmation Message");
@@ -372,11 +345,7 @@ public class DashboardController implements Initializable {
                     statement = connect.createStatement();
                     statement.executeUpdate(sql);
 
-                    alert = new Alert(AlertType.INFORMATION);
-                    alert.setTitle("Information Message");
-                    alert.setHeaderText(null);
-                    alert.setContentText("Successful Updated!");
-                    alert.showAndWait();
+                    showMessage("Update Success!");
 
                     // TO BE UPDATED THE TABLEVIEW
                     availableBookShowListData();
@@ -388,7 +357,7 @@ public class DashboardController implements Initializable {
 
     }
 
-    public void availableBookDelete(){
+    public void availableBookDelete() throws SQLException {
 
         String sql = "DELETE FROM book WHERE book_id = '"
                 +availableBook_bookID.getText()+"'";
@@ -405,11 +374,7 @@ public class DashboardController implements Initializable {
                     || availableBook_publishDatePicker.getValue() == null
                     || availableBook_price.getText().isEmpty()
                     || getData.path == null || getData.path == ""){
-                alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Error Message");
-                alert.setHeaderText(null);
-                alert.setContentText("Please fill all blank fields");
-                alert.showAndWait();
+                showErrorMessage("Please fill in all blank field!");
             }else{
                 alert = new Alert(AlertType.CONFIRMATION);
                 alert.setTitle("Confirmation Message");
@@ -421,11 +386,7 @@ public class DashboardController implements Initializable {
                     statement = connect.createStatement();
                     statement.executeUpdate(sql);
 
-                    alert = new Alert(AlertType.INFORMATION);
-                    alert.setTitle("Information Message");
-                    alert.setHeaderText(null);
-                    alert.setContentText("Successful Delete!");
-                    alert.showAndWait();
+                    showMessage("Deletion Success!");
 
                     // TO BE UPDATED THE TABLEVIEW
                     availableBookShowListData();
@@ -467,7 +428,7 @@ public class DashboardController implements Initializable {
 
     }
 
-    public ObservableList<bookData> availableBookListData(){
+    public ObservableList<bookData> availableBookListData() throws SQLException {
 
         ObservableList<bookData> listData = FXCollections.observableArrayList();
         String sql = "SELECT * FROM book";
@@ -493,7 +454,7 @@ public class DashboardController implements Initializable {
     }
 
     private ObservableList<bookData> availableBookList;
-    public void availableBookShowListData(){
+    public void availableBookShowListData() throws SQLException {
         availableBookList = availableBookListData();
 
         availableBook_col_bookID.setCellValueFactory(new PropertyValueFactory<>("bookId"));
@@ -565,8 +526,8 @@ public class DashboardController implements Initializable {
     }
 
     private double totalP;
-    public void purchaseAdd(){
-        purchasecustomerId();
+    public void purchaseAdd() throws SQLException {
+        purchaseCustomerId();
 
         String sql = "INSERT INTO customer (customer_id, book_id, title, author, genre, quantity, price, date) "
                 + "VALUES(?,?,?,?,?,?,?,?)";
@@ -578,11 +539,7 @@ public class DashboardController implements Initializable {
 
             if(purchase_bookTitle.getSelectionModel().getSelectedItem() == null
                     || purchase_bookID.getSelectionModel().getSelectedItem() == null){
-                alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Error message");
-                alert.setHeaderText(null);
-                alert.setContentText("Please choose book first");
-                alert.showAndWait();
+                showErrorMessage("Please choose book first!");
             }else{
 
                 prepare = connect.prepareStatement(sql);
@@ -622,7 +579,7 @@ public class DashboardController implements Initializable {
         }catch(Exception e){e.printStackTrace();}
     }
 
-    public void purchasePay(){
+    public void purchasePay() throws SQLException {
 
         String sql = "INSERT INTO customer_info (customer_id, total, date) "
                 + "VALUES(?,?,?)";
@@ -632,11 +589,7 @@ public class DashboardController implements Initializable {
         try{
             Alert alert;
             if(displayTotal == 0){
-                alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Error message");
-                alert.setHeaderText(null);
-                alert.setContentText("Invalid :3");
-                alert.showAndWait();
+                showErrorMessage("Please add book before proceeding!");
             }else{
                 alert = new Alert(AlertType.CONFIRMATION);
                 alert.setTitle("Confirmation message");
@@ -656,11 +609,7 @@ public class DashboardController implements Initializable {
 
                     prepare.executeUpdate();
 
-                    alert = new Alert(AlertType.INFORMATION);
-                    alert.setTitle("Information message");
-                    alert.setHeaderText(null);
-                    alert.setContentText("Successful!");
-                    alert.showAndWait();
+                    showMessage("Successful!");
                 }
             }
         }catch(Exception e){e.printStackTrace();}
@@ -668,8 +617,8 @@ public class DashboardController implements Initializable {
     }
 
     private double displayTotal;
-    public void purchaseDisplayTotal(){
-        purchasecustomerId();
+    public void purchaseDisplayTotal() throws SQLException {
+        purchaseCustomerId();
 
         String sql = "SELECT SUM(price) FROM customer WHERE customer_id = '"+customerId+"'";
 
@@ -689,7 +638,7 @@ public class DashboardController implements Initializable {
 
     }
 
-    public void purchaseBookId(){
+    public void purchaseBookId() throws SQLException {
 
         String sql = "SELECT book_id FROM book";
 
@@ -711,7 +660,7 @@ public class DashboardController implements Initializable {
 
     }
 
-    public void purchaseBookTitle(){
+    public void purchaseBookTitle() throws SQLException {
 
         String sql = "SELECT book_id, title FROM book WHERE book_id = '"
                 +purchase_bookID.getSelectionModel().getSelectedItem()+"'";
@@ -736,7 +685,7 @@ public class DashboardController implements Initializable {
 
     }
 
-    public void purchaseBookInfo(){
+    public void purchaseBookInfo() throws SQLException {
 
         String sql = "SELECT * FROM book WHERE title = '"
                 +purchase_bookTitle.getSelectionModel().getSelectedItem()+"'";
@@ -771,8 +720,8 @@ public class DashboardController implements Initializable {
 
     }
 
-    public ObservableList<customerData> purchaseListData(){
-        purchasecustomerId();
+    public ObservableList<customerData> purchaseListData() throws SQLException {
+        purchaseCustomerId();
         String sql = "SELECT * FROM customer WHERE customer_id = '"+customerId+"'";
 
         ObservableList<customerData> listData = FXCollections.observableArrayList();
@@ -803,7 +752,7 @@ public class DashboardController implements Initializable {
     }
 
     private ObservableList<customerData> purchaseCustomerList;
-    public void purchaseShowCustomerListData(){
+    public void purchaseShowCustomerListData() throws SQLException {
         purchaseCustomerList = purchaseListData();
 
         purchase_col_bookID.setCellValueFactory(new PropertyValueFactory<>("bookId"));
@@ -818,18 +767,18 @@ public class DashboardController implements Initializable {
     }
 
     private SpinnerValueFactory<Integer> spinner;
-
     public void purchaseDisplayQTY(){
         spinner = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 10, 0);
         purchase_quantity.setValueFactory(spinner);
     }
+
     private int qty;
     public void purchaseQty(){
         qty = purchase_quantity.getValue();
     }
 
     private int customerId;
-    public void purchasecustomerId(){
+    public void purchaseCustomerId() throws SQLException {
 
         String sql = "SELECT MAX(customer_id) FROM customer";
         int checkCID = 0 ;
@@ -867,19 +816,9 @@ public class DashboardController implements Initializable {
         user = user.substring(0, 1).toUpperCase() + user.substring(1);
         username.setText(user);
     }
-
-
-    public void close(){
-        System.exit(0);
-    }
-
-    public void minimize(){
-        Stage stage = (Stage)main_anchorPane.getScene().getWindow();
-        stage.setIconified(true);
-    }
-
+    
     @FXML
-    public void switchPanel(ActionEvent event) {
+    public void switchPanel(ActionEvent event) throws SQLException {
         if (event.getSource() == dashboard_btn) {
             dashboard_anchorPane.setVisible(true);
             availableBook_anchorPane.setVisible(false);
@@ -936,18 +875,31 @@ public class DashboardController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         displayUsername();
 
-        dashboardAB();
-        dashboardTI();
-        dashboardTC();
+        try {
+            dashboardAB();
+            dashboardTI();
+            dashboardTC();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
 
         // TO SHOW THE DATA ON TABLEVIEW (AVAILABLE BOOKS)
-        availableBookShowListData();
+        try {
+            availableBookShowListData();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
-        purchaseBookId();
-        purchaseBookTitle();
-        purchaseShowCustomerListData();
-        purchaseDisplayQTY();
-        purchaseDisplayTotal();
+        try {
+            purchaseBookId();
+            purchaseBookTitle();
+            purchaseShowCustomerListData();
+            purchaseDisplayQTY();
+            purchaseDisplayTotal();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }

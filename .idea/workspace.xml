@@ -7,7 +7,13 @@
     <list default="true" id="8a1ea9d6-07ff-483b-bdb2-8401b5c4e540" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/Bookstore_management/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/Bookstore_management/Dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Bookstore_management/database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/Bookstore_management/hello-view.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +42,12 @@
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/quan-le/Bookstore-Management.git&quot;,
-    &quot;accountId&quot;: &quot;e77b735f-537f-4305-a914-e8fb4b144eb1&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/quan-le/Bookstore-Management.git",
+    "accountId": "6de6b080-7962-4f38-80ff-199207215b71"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/Theory/a3_Control.java" root0="FORCE_HIGHLIGHTING" />
   </component>

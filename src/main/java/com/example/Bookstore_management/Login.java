@@ -26,12 +26,13 @@ public class Login extends Application {
     public static void main(String[] args) {
         launch(); //mandatory
     }
+
     public Scene sc;
 
     @Override
     public void start(Stage stage) throws Exception {
         //-----------------Load fxml file into Root--------------------
-        System.out.println( "loading login.fxml "+ getClass().getResource("Login.fxml"));
+        System.out.println("loading login.fxml " + getClass().getResource("Login.fxml"));
 
         //Load using filestream
         //String address = "src/main/java/Theory/s.fxml";
@@ -54,30 +55,5 @@ public class Login extends Application {
         stage.setScene(sc);
         stage.setTitle("Bookstore Management");     // set title for stage
         stage.show();
-    }
-
-    public class Main extends Application {
-
-        @Override
-        public void start(Stage primaryStage) {
-            ComboBox<String> comboBox = new ComboBox<>();
-            ObservableList<String> items = FXCollections.observableArrayList("Option 1", "Option 2", "Option 3");
-            comboBox.setItems(items);
-
-            // Wrap the update code in a Platform.runLater call
-            Platform.runLater(() -> {
-                // Add a new item to the list
-                items.add("Option 4");
-                // Or modify an existing item
-                items.set(1, "Modified Option 2");
-            });
-
-            VBox root = new VBox(comboBox);
-            Scene scene = new Scene(root, 300, 250);
-
-            primaryStage.setTitle("ComboBox Update Example");
-            primaryStage.setScene(scene);
-            primaryStage.show();
-        }
     }
 }
