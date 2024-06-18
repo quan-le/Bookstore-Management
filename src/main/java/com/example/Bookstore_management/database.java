@@ -9,7 +9,7 @@ public class database {
     public static Connection connectDb() throws SQLException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/book", "root", "");
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/bookstore", "root", "");
         } catch (ClassNotFoundException | SQLException e) {
             // Rethrow the exception to let the caller handle it
             throw new SQLException("Error connecting to the database", e);

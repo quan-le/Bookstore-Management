@@ -13,7 +13,7 @@ public class customerData {
     private Double price;
     private Date date;
 
-    public customerData(Integer customerId, Integer bookId, String title, String author, String genre
+    public customerData(Integer bookId, String title, String author, String genre
                         , Integer quantity, Double price, Date date){
         this.customerId = customerId;
         this.bookId = bookId;
@@ -25,9 +25,6 @@ public class customerData {
         this.date = date;
     }
 
-    public Integer getCustomerId(){
-        return customerId;
-    }
 
     public Integer getBookId() {
         return bookId;
